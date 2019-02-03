@@ -1,14 +1,301 @@
+<!doctype html>
 <html>
-    <head>
-    </head>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Exo|Righteous" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <body>
-        <form action = "/" method = "get">
-            <button type = "submit" name = "button">Check</button>
-        </form>
-        <form action = "/superhero" method = "get">
-            <button type = "submit" name = "button">Which superhero am I?</button>
-        </form>
-    </body>
+<!--------------------------------------------------->
+<style>
+	#heading{
+		margin-bottom: 0;
+		background-color: cornsilk;
+	}
+	#head{
+		margin-bottom: 0;
+		color:brown;
+		font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"
+	}
+	
+	.people{
+		width:8em;
+		height:8em;
+		border-radius:50%;
+		background-color: aquamarine;
+		
+	}
+	.gap{
+		margin:3em;
+	}
+	.comment{
+		text-align:left; font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif'; margin:1em 1.5em 1.5em 1.5em;
+	}
+	.post{
+		
+		position: relative;
+		
+	}
+	.post:hover{
+		border-left: 0.1em solid #095D4C;
+		transform:translateY(-10px);
+		background-color: #F7F9EA;
+		box-shadow:0 6px 5px 1px #9E9E9E;
+	}
+	.khabar{
+		height:18em;
+		box-shadow: 0 3px 5px 0 #ADADAD;
+		padding:0.1em; 
+		margin: 0.8em;
+	}
+	.foodie{
+		text-align: center;
+		padding:2px;
+		margin: 0.8em 0;
+		
+	}
+	.foot{
+		color:aliceblue;
+		
+	}
+	.foot:hover{
+		text-decoration: none;
+		color:aliceblue;
+		
+	}
+	.up-arrow{
+		position:fixed;
+		bottom: 3.5em;
+		right:6em;
+		z-index: 1;
+		
+	}
+	.up{
+		height:4em;
+		width:4em;
+		border-radius:50%;
+	}
+	</style>
+<title>
+	Food Blog
+</title>
+</head>
+<body>
+ <nav class="navbar navbar-light bg-light">
+  <a style="transition: 2s;" id="main" class="navbar-brand" href="#"><h2>Bangali food</h2></a>
 
-</html> 
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search blog.." aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+<div id="heading">
+	<div  class="container container-fluid" >
+		<div style="margin-bottom: 0;" class="row">
+			<div class="col-lg-3" style="margin-bottom: 0;">
+				<p style="margin-bottom: 0;"><img style="height: 17em; margin-bottom:0;" src="icon.jpg"></p>
+			</div>
+			<div class="col-lg-2">
+				<!--<div class="jumbotron-fluid">-->
+
+			</div>
+			<div class="col-lg-7">
+				<div id="head" class="jumbotron jumbotron-fluid bg-transparent">
+					<h2 class="display-4">A foody blog</h2>
+					<p class="lead">A webpage which contains some bangali recipies that foodies might go crazy about</p>
+				</div>
+
+			</div>
+		</div>
+		
+	</div>
+</div>
+<!--  ------------------------------------------------------------------->
+
+
+
+<div class="gap"></div>
+
+
+<!--The three people's opinion------------------------------------------->
+
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="post col-md-4" >
+			<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+<!--image-->	<div class="people"><img class="people" src="dp2.jfif"></div>
+			</div>
+			<div class="col-md-4"></div>
+			</div>
+			
+			<div class="comment row">
+				<h2 class="foodie " style="font-family:'Righteous'; font-weight: bold;">Heavenly</h2>
+
+				Captain Kirk in species in Volcon space discovers new moon Live long and prosper Captain in federation orbit alien. Kirk in species in Film Voyager into Discovery USS Enterprise movie. temperature Roddenberry speed of light interstellar and 
+			</div>
+			<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-5">
+				<a href="#" class="btn btn-outline-primary">View more..</a> 
+			</div>
+			<div class="col-md-3"></div>
+			</div>
+		</div>
+		<div class="post col-md-4" >
+			<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+<!--image-->	<div class="people"><img class="people" src="dp3.jfif"></div>
+			</div>
+			<div class="col-md-4"></div>
+			</div>
+			
+			<div class="comment row">
+			<h2 class="foodie " style="font-family:'Righteous'; font-weight: bold;">Fantasy</h2>
+
+				Captain Kirk in species in Volcon space discovers new moon Live long and prosper Captain in federation orbit alien. Kirk in species in Film Voyager into Discovery USS Enterprise movie. temperature Roddenberry speed of light interstellar and 
+			</div>
+			<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-5">
+				<a href="#" class="btn btn-outline-primary">View more..</a> 
+			</div>
+			<div class="col-md-3"></div>
+			</div>
+		</div>
+		<div class="post col-md-4" >
+			<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+<!--image-->	<div class="people"><img class="people" src="dp1.jfif"></div>
+			</div>
+			<div class="col-md-4"></div>
+			</div>
+			
+			<div class="comment row">
+			<h2 class="foodie " style="font-family:'Righteous'; font-weight: bold;">Superb</h2>
+			
+				Captain Kirk in species in Volcon space discovers new moon Live long and prosper Captain in federation orbit alien. Kirk in species in Film Voyager into Discovery USS Enterprise movie. temperature Roddenberry speed of light interstellar and 
+			</div>
+			<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-5">
+				<a href="#" class="btn btn-outline-primary">View more..</a> 
+			</div>
+			<div class="col-md-3"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr style="width:70%; margin-top: 5em; margin-bottom: 4em;">
+
+<div class="container">
+	<div class="jumbotron jumbotron-fluid text-center">
+		<h1 class="display-4">There you go foodies</h1>
+		<!--****auto-scroll-down button to be added*****-->
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<img src="aloor dom.jpg" class="khabar img-fluid" >
+			<h2 class="foodie " style="font-family:'Righteous'; font-weight: bold;">"Aloor dom"</h2>
+			<p class="foodie" style="font-family: 'Bree Serif', serif">Kirk in species in Film Voyager into Discovery USS Enterprise is Captain Kirk finds Janeway, William Shatner universe, planet extra-terrestrial infinity temperature Roddenberry speed of light interstellar.</p>
+		</div>
+		<div class="col-md-3">
+			<img src="Jackfruit_curry_Enchorer_torkari.jpg" class="khabar img-fluid" >
+			<h2 class="foodie " style="font-family:'Righteous'; font-weight: bold;">"Echorer tarkari"</h2>
+			<p class="foodie" style="font-family: 'Bree Serif', serif">Kirk in species in Film Voyager into Discovery USS Enterprise is Captain Kirk finds Janeway, William Shatner universe, planet extra-terrestrial infinity temperature Roddenberry speed of light interstellar.</p>
+		</div>
+		<div class="col-md-3">
+			<img src="sorshe ilish.jpg" class="khabar img-fluid" >
+			<h2 class="foodie " style="font-family:'Righteous'; font-weight: bold;">"Sorshe ilish"</h2>
+			<p class="foodie " style="font-family:'Bree Serif', serif">Kirk in species in Film Voyager into Discovery USS Enterprise is Captain Kirk finds Janeway, William Shatner universe, planet extra-terrestrial infinity temperature Roddenberry speed of light interstellar.</p>
+		</div>
+		<div class="col-md-3">
+			<img src="chingri malaikari.jpg" class="khabar img-fluid" >
+			<h2 class="foodie " style="font-family:'Righteous'; font-weight: bold;">"Chingri Malaikari"</h2>
+			<p class="foodie " style="font-family:'Bree Serif', serif">Kirk in species in Film Voyager into Discovery USS Enterprise is Captain Kirk finds Janeway, William Shatner universe, planet extra-terrestrial infinity temperature Roddenberry speed of light interstellar.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<img src="Jhinge_Posto.jpg" class="khabar img-fluid" >
+			<h2 class="foodie" style="font-family:'Righteous'; font-weight: bold;">"Jhing Posto"</h2>
+			<p class="foodie " style="font-family:'Bree Serif', serif">Kirk in species in Film Voyager into Discovery USS Enterprise is Captain Kirk finds Janeway, William Shatner universe, planet extra-terrestrial infinity temperature Roddenberry speed of light interstellar.</p>
+		</div>
+		<div class="col-md-3">
+			<img src="peyajkoli.jpg" class="khabar img-fluid" >
+			<h2 class="foodie " style="font-family:'Righteous'; font-weight: bold;">"Peyaj Koli"</h2>
+			<p class="foodie " style="font-family: 'Bree Serif', serif">Kirk in species in Film Voyager into Discovery USS Enterprise is Captain Kirk finds Janeway, William Shatner universe, planet extra-terrestrial infinity temperature Roddenberry speed of light interstellar.</p>
+		</div>
+		<div class="col-md-3">
+			<img src="rui_kalia.jpg" class="khabar img-fluid" >
+			<h2 class="foodie " style="font-family:'Righteous'; font-weight: bold;">"Rui kalia"</h2>
+			<p class="foodie " style="font-family:'Bree Serif', serif">Kirk in species in Film Voyager into Discovery USS Enterprise is Captain Kirk finds Janeway, William Shatner universe, planet extra-terrestrial infinity temperature Roddenberry speed of light interstellar.</p>
+		</div>
+		<div class="col-md-3">
+			<img src="fulkopir.dalna.recipe.jpg"  class="khabar img-fluid" >
+			<h2 class="foodie " style="font-family:'Righteous'; font-weight: bold;">"Fulkopir dalna"</h2>
+			<p class="foodie" style="font-family:'Bree Serif', serif">Kirk in species in Film Voyager into Discovery USS Enterprise is Captain Kirk finds Janeway, William Shatner universe, planet extra-terrestrial infinity temperature Roddenberry speed of light interstellar.</p>
+		</div>
+	</div>
+</div>
+<hr style="width:70%; margin-top: 5em; margin-bottom: 4em;">
+<div style="padding: 2em; color: aliceblue;" class="container-fluid bg-dark">
+	<div class="row">
+		<div class="col-md-5">
+			<div >
+			<p></p>
+			<p></p>
+				<h2 ><a class="foot" href="#">Bangalifoods.com</a></h2>
+			</div>
+		</div>
+		<div class=" col-md-4">
+			<p >Follow us on :</p>
+			<p>
+				<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">
+					<i class="fa fa-instagram"></i>
+				</a>
+				<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">
+					<i class="fa fa-twitter"></i>
+				</a>
+				<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">
+					<i class="fa fa-github"></i>
+				</a>
+			</p>
+		</div>
+		<div class="col-md-3">
+		
+	</div>
+	</div>
+</div>
+<div  class=" up-arrow">
+	<a  class="up btn btn-outline-success" href="#main"><i style="font-size: 2.5em;" class="fa fa-arrow-up"></i></a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
