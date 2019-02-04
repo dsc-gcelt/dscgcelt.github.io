@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+*,body,html{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	height: 2000px;
+}
+nav{
+	box-shadow: 0 3px 5px 0 grey; 
+}
+.navbar .container a{
+	color: black;
+}
+.git{
+	
+	transition:0.3s ease;
+}
+.git:hover{
+	transform: translateY(-3px);
+	color: white;
+}
+.nav-item{
+	padding: 6px; 
+	font-size: 25px;
+}
+.nav-item:hover{
+	color:none;
+}
