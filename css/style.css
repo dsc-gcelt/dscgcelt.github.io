@@ -11,8 +11,12 @@ body{
 nav{
 	box-shadow: 0 3px 5px 0 grey; 
 }
-.navbar .container a{
-	color: black;
+.navbar .container .navbar-brand{
+	padding: 6px; 
+	padding-bottom: 1px;
+	font-size: 30px;
+	color:white;
+	
 }
 .git{
 	
@@ -24,6 +28,7 @@ nav{
 }
 .nav-item{
 	padding: 6px; 
+	padding-bottom: 1px;
 	font-size: 25px;
 }
 .nav-item:hover{
