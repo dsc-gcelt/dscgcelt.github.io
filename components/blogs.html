@@ -1,0 +1,30 @@
+<section>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper white">
+                <a onclick="navAbout()" href="#" class="brand-logo grey-text">DSC GCELT</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li class="active"><a href="#!" class="grey-text">Feeds</a></li>
+                    <li onclick="navProject()"><a href="#!" class="grey-text">Projects</a></li>
+                    <li onclick="navEvent()"><a href="#!" class="grey-text">Events</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+    <div class="wrapper">
+        <h4 class='right-align'>Blogs</h4>
+        <div class="galary row">
+            <% for(let i in this.blogs) {%>
+            <div class="blog card-panel hoverable" onclick="expandBlog(this)">
+                <a onclick="revertBlog()" class="close-btn btn-floating white"><i
+                        class="material-icons red-text">clear</i></a>
+                <img class='cover z-depth-2' src="<%this.blogs[i].data.image%>" alt="">
+                <h6 class='right-align black-text truncate'><%this.blogs[i].data.title%></h6>
+                <div class="content"><%this.blogs[i].data.content%></div>
+            </div>
+            <%}%>
+        </div>
+    </div>
+    
+    </section>

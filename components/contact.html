@@ -1,0 +1,75 @@
+<section>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper white">
+                <a onclick="navAbout()" href="#" class="brand-logo grey-text">DSC GCELT</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li onclick="navBlog()"><a href="#!" class="grey-text">Feeds</a></li>
+                    <li onclick="navProject()"><a href="#!" class="grey-text">Projects</a></li>
+                    <li onclick="navEvent()"><a href="#!" class="grey-text">Events</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h4 style="text-align: right;">Find Us @</h4>
+            <div class="row">
+                <div class="col s12 m7">
+                    <div class="center-cont">
+                        <iframe width="100%" height="355" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=government%20college%20of%20engineering%20and%20leather%20technology&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+                <div class="col s12 m5 center-cont" style="height: 355px;">
+                    <div class="profile-card" style="align-items: flex-start;">
+                        <div style="text-align: left;">
+                            <h5>Government College Of Engineering and Leather Technology</h5>
+                            <br />
+                            <h6 class="gray-text"><i class="fas fa-compass"></i> LB block, sector-3, Saltlake city,
+                                Kolkata - 700106</h6>
+                            <h6 class="gray-text"><i class="far fa-envelope-open"></i> <a
+                                    href="dscgcelt@gmail.com">dscgcelt@gmail.com</a></em></h6>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gap-20"></div>
+        <div class="row">
+            <h4>Contact Us</h4>
+            <blockquote>If you have any openion or project requests please contact us using the form bellow.</blockquote>
+        </div>
+        <div class="row">
+            <form id='message_create' class="col s12">
+                <div class="row">
+                    <div class="input-field col s8">
+                        <input id="message_name" type="text" class="validate" required>
+                        <label for="message_name">name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <input id="message_email" type="email" class="validate" required>
+                        <label for="message_email">email</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <input id="message_phone" type="text" class="validate" required>
+                        <label for="message_phone">phone</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="message_msg" class="materialize-textarea"></textarea>
+                        <label for="message_msg">message</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn waves-effect blue" type='submit'>submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,42 @@
+<section>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper white">
+                <a onclick="navAbout()" href="#" class="brand-logo grey-text">DSC GCELT</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li onclick="navBlog()"><a href="#!" class="grey-text">Feeds</a></li>
+                    <li onclick="navProject()"><a href="#!" class="grey-text">Projects</a></li>
+                    <li onclick="navEvent()"><a href="#!" class="grey-text">Events</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <h4 class='right-align'>team</h4>
+        <div class="row">
+            <% for(let i in this.members) {%>
+            <div class="col s12 m6 l4">
+                <div class="card-panel profile-card z-depth-2 hoverable" style="margin-bottom: 70px;">
+                    <img class='circle  z-depth-2' src="<%this.members[i].data.image%>"> </img>
+                    <h6><%this.members[i].data.name%></h6>
+                    <span class='grey-text'><%this.members[i].data.rank%></span>
+                    <span class='grey-text'> field : <strong
+                            class='blue-text'><%this.members[i].data.field%></strong></span>
+                    <div class="gap-20"></div>
+                    <p class='grey-text'><%this.members[i].data.bio%></p>
+                    <div class="gap-20"></div>
+                    <div class="line"></div>
+                    <div class="btn-group2">
+                        <a href="<%this.members[i].data.github%>" target='_blank' class="btn-floating white"><i
+                                class="fab fa-github blue-text"></i></a>
+                        <a href="<%this.members[i].data.facebook%>" target='_blank' class="btn-floating white"><i
+                                class="fab fa-facebook blue-text"></i></a>
+                    </div>
+                </div>
+            </div>
+            <%}%>
+        </div>
+    </div>
+    
+    </section>

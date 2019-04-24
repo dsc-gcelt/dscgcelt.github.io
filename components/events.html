@@ -1,0 +1,35 @@
+<section>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper white">
+                <a onclick="navAbout()" href="#" class="brand-logo grey-text">DSC GCELT</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li onclick="navBlog()"><a href="#!" class="grey-text">Feeds</a></li>
+                    <li onclick="navProject()"><a href="#!" class="grey-text">Projects</a></li>
+                    <li class="active"><a href="#!" class="grey-text active">Events</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+    <div class="timeline">
+        <h4 class='right-align'>Events</h4>
+        <ul>
+            <% for(var ind in this.events) { %>
+            <li class="xz">
+                <div class="card-panel waves-effect hoverable profile-card" style="align-items: flex-start; height: auto;">
+                    <h5 class="gray-text blue-text"><%this.events[ind].data.title%></em></h5>
+                    <div style="text-align: left;">
+                        <h6 class="gray-text">date: <em><%this.events[ind].data.date%></em></h6>
+                        <h6 class="gray-text">venue: <em><%this.events[ind].data.venue%></em></h6>
+                    </div>
+                    <br />
+                    <blockquote style="border-color: #ccc; text-align: left;">
+                        <p><%this.events[ind].data.details%></p>
+                    </blockquote>
+                </div>
+            </li>
+            <%}%>
+        </ul>
+    </div>
+</section>

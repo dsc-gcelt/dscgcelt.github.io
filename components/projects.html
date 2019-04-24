@@ -1,0 +1,36 @@
+<section>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper white">
+                <a onclick="navAbout()" href="#" class="brand-logo grey-text">DSC GCELT</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li onclick="navBlog()"><a href="#!" class="grey-text">Feeds</a></li>
+                    <li class="active"><a href="#!" class="grey-text">Projects</a></li>
+                    <li onclick="navEvent()"><a href="#!" class="grey-text">Events</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+    <div class="timeline">
+        <h4 class='right-align'>Projects</h4>
+        <ul>
+            <% for(var inx in this.projects) { %>
+            <li class="xz">
+                <div class="card-panel waves-effect hoverable profile-card" style="align-items: flex-start;"
+                    onclick="openCodebase('<%this.projects[inx].contents_url%>')">
+                    <h4 class="gray-text text-darken-2"><%this.projects[inx].name%></em></h4>
+                    <div style="text-align: left;">
+                        <h6 class="gray-text">created: <em><%this.projects[inx].created_at%></em></h6>
+                        <h6 class="gray-text">language: <em><%this.projects[inx].language%></em></h6>
+
+                    </div>
+                    <br />
+                    <h6 class="blue-text">Description</em></h6>
+                    <p class="blue-grey-text"><%this.projects[inx].description%></p>
+                </div>
+            </li>
+            <%}%>
+            </ul>
+    </div>
+</section>

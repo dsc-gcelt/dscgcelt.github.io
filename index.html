@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"
+        integrity="sha256-qGOnfp7iY6DsnB55K7M+0PZjWCtzafRyJh33tgQJkMQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/init.css">
+    <link rel="stylesheet" href="styles/launcher.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <title>DSC GCELT</title>
+</head>
+
+<body>
+    <div id="launcher">
+        <div id="l-outer" class='waves-effect'>
+            <div id="l-frame">
+                <div id="l-left">
+                    <div id="l-red" class="l-let"></div>
+                    <div id="l-blue" class="l-let"></div>
+                </div>
+                <div id="l-right">
+                    <div id="l-green" class="l-let"></div>
+                    <div id="l-yellow" class="l-let"></div>
+                </div>
+            </div>
+            <div class="l-h1">
+                <h1 class='l-h1'>Developer Student CLubs</h1>
+                <h1 class='l-h1'>GCELT</h1>
+            </div>
+
+        </div>
+    </div>
+    <ul id="menu" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background blue lighten-2">
+                </div>
+                </br>
+                <h4 class="white-text">DSC GCELT</h4>
+                <a href="dscgcelt@gmail.com"></a><span class="grey-text text-lighten-3 email">dscgcelt@gmail.com</span>
+            </div>
+        </li>
+        <li><a onclick="navBlog()" class="waves-effect grey-text text-darken-1" href="#!"><i
+                    class="material-icons">layers</i>Feeds</a></li>
+        <li><a onclick="navProject()" class="waves-effect grey-text text-darken-1" href="#!"><i
+                    class="material-icons">photo_album</i>projects</a></li>
+        <li><a onclick="navEvent()" class="waves-effect grey-text text-darken-1" href="#!"><i
+                    class="material-icons">event_available</i>Events</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a onclick="navAbout()" class="waves-effect grey-text text-darken-1" href="#!"><i
+                    class="material-icons">code</i>About</a></li>
+        <li><a onclick="navTeam()" class="waves-effect grey-text text-darken-1" href="#!"><i class="material-icons">people</i>Team</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a onclick="navContact()" class="waves-effect grey-text text-darken-1" href="#!"><i class="material-icons">where_to_vote</i>Contact</a></li>
+    </ul>
+    <!--routing is implemented in this div-->
+    <div id="router-outlet"></div>
+    <div class="gap-20"></div>
+    <div id="modal1" class="modal">
+        <div class="modal-content" id='mcont'>
+            <h4>loading...</h4>
+        </div>
+    </div>
+
+    <footer class="page-footer blue">
+            <div class="container">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h5 class="white-text">Developer Student Clubs</h5>
+                  <p class="grey-text text-lighten-4">Government College of Engineering and Leather Technology</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                  <h5 class="white-text">resources</h5>
+                  <ul>
+                    <li><a class="grey-text text-lighten-3" target='_blank' href="https://developers.google.com/programs/dsc/">About dsc</a></li>
+                    <li><a class="grey-text text-lighten-3" target='_blank' href="https://developers.google.com/programs/dsc/stories/">Stories</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="container">
+              © GCELT Developer Student Club 2019
+              <a class="grey-text text-lighten-4 right" href="#!">Powered by Google Developers</a>
+              </div>
+            </div>
+          </footer>
+              
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script src='system/functions.js'></script>
+    <script src='system/launcher.js'></script>
+    <script src='system/data.js'></script>
+    <script src='system/router.js'></script>
+
+    <script src='interactions/main.js'></script>
+</body>
+
+</html>

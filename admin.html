@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"
+        integrity="sha256-qGOnfp7iY6DsnB55K7M+0PZjWCtzafRyJh33tgQJkMQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="system/pell.min.css" />
+    <title>admin</title>
+    <style>
+        .wrapper {
+            margin: auto;
+            width: 800px;
+        }
+
+        .tabs .tab a {
+            color: rgba(38, 166, 154, 0.7) !important;
+            /*Custom Text Color*/
+        }
+
+        .tabs .tab a:hover {
+            color: #26a69a;
+            /*Custom Color On Hover*/
+        }
+
+        .tabs .tab a:focus.active {
+            color: #26a69a;
+            /*Custom Text Color While Active*/
+            background-color: rgba(38, 166, 154, 0.2);
+            /*Custom Background Color While Active*/
+        }
+
+        .tabs .indicator {
+            background-color: #26a69a;
+            /*Custom Color Of Indicator*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s4 blue-text"><a href="#feed">Feed</a></li>
+                    <li class="tab col s4"><a href="#event">Event</a></li>
+                    <li class="tab col s4"><a href="#team">Team</a></li>
+                </ul>
+            </div>
+            <div id="feed" class="col s12">
+                <div class="row">
+                    <form id='blog_create' class="col s12">
+                        <h3>Add Blog</h3>
+                        <div class="row">
+                            <div class="input-field col s8">
+                                <input id="blog_title" type="text" class="validate" required>
+                                <label for="blog_title">title</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="file-field input-field col s8">
+                                <div class="btn">
+                                    <span>image</span>
+                                    <input id='blog_image' type="file" required>
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h6>content</h6>
+                            <div id="blog-editor" class='card-panel'></div>
+                        </div>
+                        <div class="row">
+                            <button class="btn waves-effect blue" type='submit'> Add Feed</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="event" class="col s12">
+                <div class="row">
+                    <form id='event_create' class="col s12">
+                        <h3>Event</h3>
+                        <div class="row">
+                            <div class="input-field col s8">
+                                <input id="event_title" type="text" class="validate" required>
+                                <label for="event_title">title</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <input id="event_venue" type="text" class="validate" required>
+                                <label for="event_venue">venue</label>
+                            </div>
+                            <div class="input-field col s12 m6">
+                                <input id="event_date" type="text" class="validate datepicker" required>
+                                <label for="event_date">date</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="file-field input-field col s8">
+                                <div class="btn">
+                                    <span>image</span>
+                                    <input id='event_image' type="file" required>
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h6>content</h6>
+                            <div id="event-editor" class='card-panel'></div>
+                        </div>
+                        <div class="row">
+                            <button class="btn waves-effect blue" type='submit'> Add Event</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div id="team" class="col s12">
+                <div class="row">
+                    <form id='team_create' class="col s12">
+                        <h3>Team</h3>
+                        <div class="row">
+                            <div class="input-field col s8">
+                                <input id="team_name" type="text" class="validate" required>
+                                <label for="team_name">name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="team_git" type="text" class="validate" required>
+                                <label for="team_git">github account</label>
+                            </div>
+                            <div class="input-field col s6">
+                                    <input id="team_facebook" type="text" class="validate" required>
+                                    <label for="team_facebook">facebook account</label>
+                                </div>
+                            <div class="input-field col s6">
+                                <input id="team_field" type="text" class="validate" required>
+                                <label for="team_field">subject field</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="team_rank" type="text" class="validate" required>
+                                <label for="team_rank">rank</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="file-field input-field col s8">
+                                <div class="btn">
+                                    <span>image</span>
+                                    <input id='team_image' type="file" required>
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                              <textarea id="team_bio" class="materialize-textarea"></textarea>
+                              <label for="team_bio">biodata</label>
+                            </div>
+                          </div>
+                        <div class="row">
+                            <button class="btn waves-effect blue" type='submit'> Add Member</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script src='system/functions.js'></script>
+    <script src='system/data.js'></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            //initialize materialize widgets
+            let tabs = M.Tabs.init(_class('tabs')[0])
+            M.Datepicker.init(_class('datepicker')[0])
+
+            let content = ''
+            let ev_content = ''
+
+            //custom formatting
+            let fx = function (t) { var e = 1 < arguments.length && void 0 !== arguments[1] ? arguments[1] : null; return document.execCommand(t, !1, e) }
+            let pell_actions = [
+                'bold',
+                'underline',
+                'italic',
+                'strikethrough',
+                'heading1',
+                'heading2',
+                'paragraph',
+                'quote',
+                'olist',
+                'ulist',
+                'code',
+                'line',
+                'link',
+                'image',
+                {
+                    name: 'color red',
+                    icon: "<b style='color:#f44336;'>&#9830;</b>",
+                    title: 'color red',
+                    result: () => pell.exec('foreColor', '#f44336')
+                },
+                {
+                    name: 'color blue',
+                    icon: "<b style='color:#2196f3;'>&#9830;</b>",
+                    title: 'color blue',
+                    result: () => pell.exec('foreColor', '#2196f3')
+                },
+                {
+                    name: 'highlight',
+                    icon: "<b style='background:#f4ff81;'>H</b>",
+                    title: 'highlight',
+                    result: () => pell.exec('backColor', '#f4ff81')
+                },
+                {
+                    name: 'align left',
+                    icon: "<i class='fas fa-align-left'></i>",
+                    title: 'align left',
+                    result: () => pell.exec('justifyLeft', true)
+                },
+                {
+                    name: 'align center',
+                    icon: "<i class='fas fa-align-center'></i>",
+                    title: 'align center',
+                    result: () => pell.exec('justifyCenter', true)
+                },
+                {
+                    name: 'align right',
+                    icon: "<i class='fas fa-align-right'></i>",
+                    title: 'align right',
+                    result: () => pell.exec('justifyRight', true)
+                },
+            ]
+            pell.init({
+                element: document.getElementById('blog-editor'),
+
+                onChange: html => { content = html },
+                defaultParagraphSeparator: 'div',
+                styleWithCSS: false,
+                classes: {
+                    actionbar: 'pell-actionbar',
+                    button: 'pell-button',
+                    content: 'pell-content',
+                    selected: 'pell-button-selected'
+                },
+                actions: pell_actions
+            })
+            pell.init({
+                element: document.getElementById('event-editor'),
+
+                onChange: html => { ev_content = html },
+                defaultParagraphSeparator: 'div',
+                styleWithCSS: false,
+                classes: {
+                    actionbar: 'pell-actionbar',
+                    button: 'pell-button',
+                    content: 'pell-content',
+                    selected: 'pell-button-selected'
+                },
+                actions: pell_actions
+            })
+            _id('blog_create').addEventListener('submit', async e => {
+                e.preventDefault()
+                let image = await storeImage('blog_image')
+                let title = _id('blog_title').value
+                addBlog(title, content, image)
+            })
+            _id('event_create').addEventListener('submit', async e => {
+                e.preventDefault()
+                let image = await storeImage('event_image')
+                let title = _id('event_title').value,
+                    date = _id('event_date').value,
+                    venue = _id('event_venue').value
+                addEvent(title, venue, image, ev_content, date)
+            })
+            _id('team_create').addEventListener('submit', async e => {
+                e.preventDefault()
+                let image = await storeImage('team_image')
+                let name = _id('team_name').value,
+                    git = _id('team_git').value,
+                    facebook = _id('team_facebook').value
+                    bio = _id('team_bio').value,
+                    rank = _id('team_rank').value,
+                    field = _id('team_field').value
+                addTeam(name, git, facebook, bio, rank, field, image)
+            })
+        })
+    </script>
+    <script src="system/pell.min.js"></script>
+</body>
+
+</html>

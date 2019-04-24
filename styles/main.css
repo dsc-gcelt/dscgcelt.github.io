@@ -1,0 +1,154 @@
+.brand-logo{
+    margin-left: 90px!important;
+    font-size: 28px !important;
+}
+.parallax-container {
+    max-height: 400px;
+}
+.full-center{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center-cont {
+    display: flex ;
+    justify-content: center ;
+    align-items: center;
+    text-align: left;
+}
+footer {
+    display: none;
+}
+.block {
+    padding: 30px 6vw;
+    width: 100vw;
+}
+.gap {
+    height: 100px;
+}
+.streach {
+    width: 100%;
+}
+.csx {
+    height: 200px;
+}
+.box {
+    font-size: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fix-height-1 {
+    max-height: 200px !important;
+}
+.btn-group {
+    display: flex;
+    justify-content: space-around;
+}
+.btn-group2 {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.timeline {
+    margin: auto;
+    margin-top: 10px;
+    width: 80vw;
+}
+.timeline::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: #bbb;
+    top: 0;
+    left: 10px;
+}
+.timeline > ul {
+    margin-left: 40px;
+}
+.timeline > ul > li {
+    margin-top: 10vh;
+}
+.timeline > ul > li::before {
+    content: '';
+    position: absolute;
+    width: 16px; 
+    height: 16px;
+    background: #3e9be7;
+    box-shadow: 0 0 9px 4px #90caf9;
+    z-index: 2;
+    left: -37px;
+    top: 16px;
+    transform: rotate(45deg);
+
+}
+.galary {
+    margin: auto;
+    margin-top: 10px;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.blog {
+    margin: 20px;
+    width: 25vw;
+    height: 140px;
+}
+.blog > .close-btn {
+    float: right;
+    visibility: hidden;
+    z-index: 30;
+}
+
+.blog > .cover {
+    height: 90px;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+.blog > .content {
+    margin: 20px auto;
+    width: 70vw;
+    display: none;
+}
+.wrapper {
+    margin: auto;
+    width: 1000px;
+}
+.t-sma {
+    font-size: 14px !important;
+}
+.tab-view {
+    height: 78vh !important;
+    overflow: scroll !important;
+}
+.profile-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 16px;
+    margin: 30px;
+    text-align: center;
+    min-width: 280px;
+    max-width: 70% !important;
+    height: 360px;
+}
+.gap-20 {
+    height:20px;
+}
+.profile-card img {
+    height: 100px;
+    margin-top: -80px;
+}
+.line {
+    width: 80%;
+    height: 2px;
+    border-radius: 1px;
+    background: #ddd;
+    margin: 8px auto;
+}

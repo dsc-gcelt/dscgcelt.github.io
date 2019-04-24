@@ -1,0 +1,13 @@
+<h5>files</h5>
+<ul class="collection">
+    <%for(let i in this.files){%>
+        <li class="collection-item" onclick="readGit('<%this.files[i].download_url%>', '<%this.files[i].path%>')">
+            <%this.files[i].name%>
+        </li>
+    <%}%>
+</ul>
+<div class="row">
+    <a href="#"><i class="fas fa-arrow-left"></i></a>
+    <div class="divider"></div>
+</div>
+<div class="row" id="rawview"></div>

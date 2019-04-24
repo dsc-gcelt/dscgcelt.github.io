@@ -1,0 +1,55 @@
+@media only screen and (max-width: 900px) {
+    #launcher h1{
+        font-size: 20px;
+    }
+    .brand-logo{
+        margin-left: 0!important;
+        font-size: 28px !important;
+    }
+    .parallax-container {
+        max-height: 200px;
+    }
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+    }
+    .block {
+        padding: 30px 4vw;
+    }
+    .timeline {
+        width: 96vw;
+    }
+    .galary {
+        width: 96vw;
+        grid-template-columns: 1fr 1fr;
+    }
+    .blog {
+        width: 36vw;
+    }
+    .wrapper {
+        width: 96vw;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #launcher h1{
+        font-size: 20px;
+    }
+    .timeline {
+        width: 96vw;
+    }
+    .galary {
+        width: 96vw;
+        grid-template-columns: 1fr;
+    }
+    .blog {
+        width: 70vw;
+    }
+    .blog > .content {
+        width: 60vw;
+    }
+    .profile-card {
+        margin: auto;
+    }
+}
