@@ -113,6 +113,7 @@ async function navProject() {
     _id('router-outlet').innerHTML = preloader
     sidenav.close()
     let r = await fetch_github()
+    console.log(r)
     let projs = r.map(({ name, created_at, contents_url, contributors_url, description, language }) => {
         return { name, created_at, contents_url, contributors_url, description, language }
     })
