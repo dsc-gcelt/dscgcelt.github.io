@@ -1,16 +1,16 @@
 
 //github
-const client_id = 'b4e8411ccc36bcd2eff3'
-const client_secret = '79a5f9d87f4d2185be9b9ef007d5f81cc09702cf'
-const client_token = '58bb9536efeab902ec0235d17016577cb615e7c1'
+const client_id = 'Iv1.7ac9d0c7c7e6beb0'
+const client_secret = '85262d1c9061f47205bffe7eee7607a235418c44'
+const client_token = 'b7f5d0d79bf2a1d5c289b480b4624e71122f3a28'
 
-
+let auth = `Basic ${btoa('hasinaxp:spandan9733')}`
 const fetch_github = async () => {
     let api_call = await fetch(`https://api.github.com/orgs/dscgcelt/repos?client_id=${client_id}&&client_secret=${client_secret}`,
         {
             headers: {
                 'content-type': 'application/json',
-                'Authorization': `token ${client_token}`
+                'Authorization': auth
             }
         })
     let data = await api_call.json()
@@ -22,7 +22,7 @@ const fetch_github_repo = async (contents_url) => {
         {
             headers: {
                 'content-type': 'application/json',
-                'Authorization': `token ${client_token}`
+                'Authorization': auth
             }
         })
     let data = await api_call.json()
